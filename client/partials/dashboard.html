@@ -1,0 +1,27 @@
+<h1>Welcome, <span ng-bind="user.name"></span></h1>
+<p>Dashboard  | <a href="#/create">Create a New Poll</a> | <a href="#/">Logout</a></p>
+<div class="row main">
+	<div class="text-right">
+		<input type="text" ng-model="query" placeholder="Search..."> 
+	</div>
+	<div class="col-xl-12">
+		<table class="table table-striped table-hover" topics>
+			<thead>
+				<tr>
+					<th>Poll Title</th>
+					<th>Created by</th>
+					<th>Date posted</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody ng-controller='dashboardController'>
+				<tr ng-repeat="poll in polls  | orderBy: created_at: 'reverse' | filter: query" >
+					<td><a ng-bind="poll.title" href="#/poll/{{poll._id}}"></a></td>
+					<td><span ng-bind="poll.username"></span></td>
+					<td><span ng-bind="poll.created_at | date: 'medium'"></span></td>
+					<td><button ng-if="user._id == poll.user_id" ng-click="removePoll(poll)">Delete</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

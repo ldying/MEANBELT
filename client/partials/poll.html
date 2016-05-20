@@ -1,0 +1,40 @@
+<h3><a href="#/dashboard">Go Back to Polls</a></h3>
+<!-- <div>USER: {{ user }}</div>
+USER: {{ user }}
+<div>poll: {{ poll }}</div> -->
+<div class="row main">
+	<div class="col-xl-12">
+		<h3>Question: <span ng-bind="poll.title"></span></h3>
+		<table class="table table-striped table-hover" topics>
+			<thead>
+				<tr>
+					<th>Option</th>
+					<th>Curent Vote Count</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><span ng-bind="poll.opt1.text"></span></td>
+					<td><span ng-bind="poll.opt1.score"></span></td>
+					<td><button ng-click="votePoll(poll, poll.opt1)">Vote!</button></td>
+				</tr>
+				<tr>
+					<td><span ng-bind="poll.opt2.text"></span></td>
+					<td><span ng-bind="poll.opt2.score"></span></td>
+					<td><button ng-click="votePoll(poll, poll.opt2)">Vote!</button></td>
+				</tr>
+				<tr>
+					<td><span ng-bind="poll.opt3.text"></span></td>
+					<td><span ng-bind="poll.opt3.score"></span></td>
+					<td><button ng-click="votePoll(poll, poll.opt3)">Vote!</button></td>
+				</tr>
+				<tr>
+					<td><span ng-bind="poll.opt4.text"></span></td>
+					<td><span ng-bind="poll.opt4.score"></span></td>
+					<td><button ng-click="votePoll(poll, poll.opt4)">Vote!</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
