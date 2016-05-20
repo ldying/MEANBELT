@@ -13,22 +13,22 @@ var pollSchema = mongoose.Schema({
 	username     :{ type: String, required: true},
 	user_id     :{ type: mongoose.Schema.Types.ObjectId, ref: "Users" },
 
-	opt1	    :{ text: { type: String, min: 3, required: false}, 
+	opt1	    :{ text: { type: String, min: 3, required: true}, 
 					score: { type: Number, default: 0},
 					optid: { type: Number, default: 1}
 				},
 
-	opt2      	:{ text: { type: String, min: 3, required: false}, 
+	opt2      	:{ text: { type: String, min: 3, required: true}, 
 					score: { type: Number, default: 0},
 					optid: { type: Number, default: 2}
 				},	
 
-	opt3 		:{ text: { type: String, min: 3, required: false}, 
+	opt3 		:{ text: { type: String, min: 3, required: true}, 
 					score: { type: Number, default: 0},
 					optid: { type: Number, default: 3}
 				},
 
-	opt4        :{ text: { type: String, min: 3, required: false}, 
+	opt4        :{ text: { type: String, min: 3, required: true}, 
 					score: { type: Number, default: 0},
 					optid: { type: Number, default: 4}
 				},
