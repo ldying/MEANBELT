@@ -13,6 +13,6 @@ app.use(bodyParser.json());
 require('./server/config/mongoose.js');
 require('./server/config/routes.js')(app);
 
-var server = app.listen(8000, function() {
+app.listen(8000, function() {
 	console.log("SURVEY POLLS EXAM on port 8000");
 });
